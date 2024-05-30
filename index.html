@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png">
+    <title>Single Site by Ash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('FrontBackground.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: aliceblue;
+        }
+
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #video-list {
+            list-style-type: none;
+            padding: 0;
+            display: none; /* Hide by default */
+        }
+
+        #video-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        #video-list li:last-child {
+            border-bottom: none;
+        }
+
+        .download-button {
+            position: relative;
+            top: 120px;
+            border-radius: 20px;
+            border-style: dotted;
+            border-color: aliceblue;
+            background-color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .image-container img {
+            border-color: aliceblue;
+            border-style: dotted;
+            border-radius: 20px;
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .image-container img {
+                width: 100%;
+                left: 0;
+                top: 20px;
+                position: static;
+            }
+
+            .download-button {
+                top: 20px;
+                position: static;
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                margin: 10px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .download-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+
+            #search {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            #video-list li {
+                padding: 8px;
+                font-size: 14px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.png" style="position: relative; left: 160px; top: 10px; height: 100px; width: 100px;">
+    <div class="container">
+        <h1 style="color: black;">Welcome to Single Site by Ash</h1>
+        <h1 style="color: #000;">All English Movies here have Own Subtitle</h1>
+        <input type="text" id="search" placeholder="Search for videos...">
+        <ul id="video-list">
+            <li><a href="https://mixdrop.is/f/3nz14l6jagqwrg" target="_blank">Godzilla x Kong The New Empire Dark-Ash Website Size:1.19 GB <img src="https://m.media-amazon.com/images/M/MV5BY2QwOGE2NGQtMWQwNi00M2IzLThlNWItYWMzNGQ5YWNiZDA4XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_.jpg" style=" position: relative; left: 50px;  height: 100px; width: 100px;"       >          </a></li>
+            <li><a href="https://mixdrop.is/f/7rogkqdpid8p9v" target="_blank">Thanksgiving(2023).Dark-Ash Website Size:943.96 MB
+                <img src="https://m.media-amazon.com/images/M/MV5BNjA4NzFmZWQtZDIyMi00OTliLWEyOWUtMTZlODBkNTQxYzg3XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" style=" position: relative; left: 50px;  height: 100px; width: 100px;"       >  
+
+
+            </a></li>
+            <li><a href="https://mixdrop.is/f/7rogkqdpid8p9v" target="_blank">The Marvels 2023 720p.BluRay.Dark-Ash Website Size: 1.02 GB
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_themarvels_poster_rebrand_8c17eea5.jpeg" style=" position: relative; left: 50px;  height: 100px; width: 100px;" >
+            </a>
+        </li>
+            <li><a href="https://mixdrop.is/f/gn9qkrowcwwgmrv" target="_blank">Tarot 2024 Horror Dark-Ash Website Size: 739.8MB
+                <img src="https://m.media-amazon.com/images/M/MV5BZGYzYjQ3ZWItMGJlZC00YzAxLTgzMTItYzI5MjY2YjA4Mjk5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg" style=" position: relative; left: 50px;  height: 100px; width: 100px;" >
+
+            </a></li>
+        </ul>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchInput = document.getElementById('search');
+            const videoList = document.getElementById('video-list');
+            const videos = videoList.getElementsByTagName('li');
+
+            searchInput.addEventListener('keyup', function() {
+                const filter = searchInput.value.toLowerCase();
+                if (filter) {
+                    videoList.style.display = 'block';
+                    for (let i = 0; i < videos.length; i++) {
+                        const videoTitle = videos[i].textContent || videos[i].innerText;
+                        if (videoTitle.toLowerCase().indexOf(filter) > -1) {
+                            videos[i].style.display = '';
+                        } else {
+                            videos[i].style.display = 'none';
+                        }
+                    }
+                } else {
+                    videoList.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
